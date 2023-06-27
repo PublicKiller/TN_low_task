@@ -6,10 +6,10 @@ public class Palindrome {
     }
 
     public boolean check() {
-        String reverse = "";
+        StringBuilder reverse = new StringBuilder();
         for (int i = this.str.length() - 1; i >= 0; i--) {
-            reverse += this.str.charAt(i);
+            reverse.append(this.str.charAt(i));
         }
-        return this.str.equals(reverse);
+        return this.str.contentEquals(reverse);
     }
 }
